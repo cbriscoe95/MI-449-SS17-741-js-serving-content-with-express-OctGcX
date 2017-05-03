@@ -15,8 +15,8 @@ app.get('/barbarian', function (request, response) {
 app.get('/rogue', function (request, response) {
   response.render('pages/rogue')
 })
-app.get('/sorceror', function (request, response) {
-  response.render('pages/sorceror')
+app.get('/sorcerer', function (request, response) {
+  response.render('pages/sorcerer')
 })
 var items = {}
 
@@ -27,24 +27,24 @@ function createItem (item) {
 }
 
 createItem({
-  image: 'placeholder image',
+  image: '/images/barbarian.tif',
   link: 'barbarian',
   title: 'Barbarian',
-  source: 'Core Player Handbook',
+  source: 'Source: Core Player Handbook',
   archetype: 'Melee Striker'
 })
 createItem({
-  image: ' rogue placeholder image',
+  image: '/images/rogue.tif',
   link: 'rogue',
   title: 'Rogue',
-  source: 'Core Player Handbook',
-  archetype: 'Melee Striker'
+  source: 'Source: Core Player Handbook',
+  archetype: 'Melee or Ranged Trickster'
 })
 createItem({
-  image: 'sorceror placeholder image',
-  link: 'sorceror',
-  title: 'Sorceror',
-  source: 'Core Player Handbook',
-  archetype: 'Magical Striker'
+  image: '/images/sorcerer.tif',
+  link: 'sorcerer',
+  title: 'Sorcerer',
+  source: 'Source: Core Player Handbook',
+  archetype: 'Magical Blaster'
 })
 app.listen(port)

@@ -4,14 +4,20 @@
     <meta charset="utf-8">
     <title>Express + EJS</title>
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
   </head>
-  <body>
+  <body class="homepage">
+    <nav>
+      <% include ../partials/header %>
+    </nav>
     <% Object.keys(items).forEach(function (id) { %>
+      <div class="<%= items[id].title %>">
         <h2><%= items[id].title %></h2>
-        <p><a href="/<%= items[id].link %>">Link</a></p>
-        <p><%= items[id].image %></p>
+        <p><img src="<%= items[id].image %>" alt="<%= items[id].image %>"></p>
+        <p><a href="/<%= items[id].link %>">Choose your path!</a></p>
         <p><%= items[id].source %></p>
         <p><%= items[id].archetype %></p>
+      </div>
     <% }) %>
   </body>
 </html>

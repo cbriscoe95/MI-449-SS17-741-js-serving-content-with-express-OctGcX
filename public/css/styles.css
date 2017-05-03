@@ -1,3 +1,59 @@
-h1 {
-  color: red;
+.homepage {
+  text-align: center;
+}
+
+body,
+.homepage {
+  background-color: #e0e0e0;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+.Barbarian {
+  width: 340px;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 1px #888;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+  background-color: #fff;
+  padding-bottom: 5px;
+  margin-left: 80px;
+}
+
+.Rogue {
+  width: 340px;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 1px #888;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+  background-color: #fff;
+  padding-bottom: 5px;
+}
+
+.Sorcerer {
+  width: 340px;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 1px #888;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+  background-color: #fff;
+  padding-bottom: 5px;
+}
+
+.navbar {
+  list-style-type: none;
+  background-color: #a9a9a9;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar li a {
+  padding: 8px;
 }
