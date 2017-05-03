@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Express + EJS</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  </head>
+  <body>
+    <% Object.keys(items).forEach(function (id) { %>
+        <h2><%= items[id].title %></h2>
+        <p><a href="/<%= items[id].link %>">Link</a></p>
+        <p><%= items[id].image %></p>
+        <p><%= items[id].source %></p>
+        <p><%= items[id].archetype %></p>
+    <% }) %>
+  </body>
+</html>
