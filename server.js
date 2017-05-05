@@ -21,8 +21,6 @@ createItem({
   link: '/barbarian',
   title: 'Barbarian',
   classLink: 'barbarianNav',
-  source: 'Source: Core Player Handbook',
-  archetype: 'Melee Striker'
 })
 createItem({
   template: 'pages/rogue',
@@ -30,8 +28,6 @@ createItem({
   link: '/rogue',
   title: 'Rogue',
   classLink: 'rogueNav',
-  source: 'Source: Core Player Handbook',
-  archetype: 'Melee or Ranged Trickster'
 })
 createItem({
   template: 'pages/sorcerer',
@@ -39,8 +35,6 @@ createItem({
   link: '/sorcerer',
   title: 'Sorcerer',
   classLink: 'sorcererNav',
-  source: 'Source: Core Player Handbook',
-  archetype: 'Magical Blaster'
 })
 Object.keys(items).forEach(function (id) {
   var heroClass = items[id]
