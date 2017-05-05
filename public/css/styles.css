@@ -57,3 +57,8 @@ body,
 .navbar li a {
   padding: 8px;
 }
+
+.heroImages {
+  height: 100px;
+  width: 80px;
+}
