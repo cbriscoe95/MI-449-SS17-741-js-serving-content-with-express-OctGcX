@@ -7,14 +7,6 @@
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
   </head>
   <body class="homepage">
-    <% Object.keys(items).forEach(function (id) { %>
-      <div class="<%= items[id].title %>">
-        <h2><%= items[id].title %></h2>
-        <p><img src="<%= items[id].image %>" alt="<%= items[id].image %>" class="heroImages"></p>
-        <p><a href="<%= items[id].link %>">Choose your path!</a></p>
-        <p><%= items[id].source %></p>
-        <p><%= items[id].archetype %></p>
-      </div>
-    <% }) %>
+  <% include ../partials/nav %>
   </body>
 </html>

@@ -12,7 +12,7 @@ function createItem (item) {
 }
 app.get('/', function (request, response) {
   response.render('pages/index', {
-    items: items
+    allClasses: items
   })
 })
 createItem({
