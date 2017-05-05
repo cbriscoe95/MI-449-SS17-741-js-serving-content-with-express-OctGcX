@@ -6,24 +6,11 @@
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
   </head>
   <body>
-    <nav>
-      <% include ../partials/header %>
-    </nav>
     <article class="barbarian-guide">
       <header>
         <h2>So you want to play a barbarian</h2>
       </header>
       <section>
-    <% Object.keys(items).forEach(function (id) { %>
-      <div class="<%= items[id].title %>">
-        <p><%= items[id].template %></p>
-        <h2><%= items[id].title %></h2>
-        <p><img src="<%= items[id].image %>" alt="<%= items[id].image %>" class="heroImages"></p>
-        <p><a href="<%= items[id].link %>">Choose your path!</a></p>
-        <p><%= items[id].source %></p>
-        <p><%= items[id].archetype %></p>
-      </div>
-    <% }) %>
       </section>
       <section>
         <h3>You should play a barbarian if:</h3>
@@ -45,5 +32,8 @@
         </ol>
       </section>
     </article>
+    <footer>
+      <% include ../partials/nav %>
+    </footer>
   </body>
 </html>

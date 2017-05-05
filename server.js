@@ -15,30 +15,12 @@ app.get('/', function (request, response) {
     items: items
   })
 })
-Object.keys(items).forEach(function (id) {
-  var heroClass = items[id]
-  app.get(heroClass.link, function (request, response) {
-    response.render(heroClass.template, {
-      items: items,
-      heroClass: heroClass
-    })
-  })
-})
-// app.get('/barbarian', function (request, response) {
-//   response.render('pages/barbarian')
-// })
-// app.get('/rogue', function (request, response) {
-//   response.render('pages/rogue')
-// })
-// app.get('/sorcerer', function (request, response) {
-//   response.render('pages/sorcerer')
-// })
-
 createItem({
   template: 'pages/barbarian',
   image: '/images/barbarian.jpg',
   link: '/barbarian',
   title: 'Barbarian',
+  classLink: 'barbarianNav',
   source: 'Source: Core Player Handbook',
   archetype: 'Melee Striker'
 })
@@ -47,6 +29,7 @@ createItem({
   image: '/images/rogue.jpg',
   link: '/rogue',
   title: 'Rogue',
+  classLink: 'rogueNav',
   source: 'Source: Core Player Handbook',
   archetype: 'Melee or Ranged Trickster'
 })
@@ -55,7 +38,17 @@ createItem({
   image: '/images/sorcerer.jpg',
   link: '/sorcerer',
   title: 'Sorcerer',
+  classLink: 'sorcererNav',
   source: 'Source: Core Player Handbook',
   archetype: 'Magical Blaster'
+})
+Object.keys(items).forEach(function (id) {
+  var heroClass = items[id]
+  app.get(heroClass.link, function (request, response) {
+    response.render(heroClass.template, {
+      allClasses: items,
+      heroClass: heroClass
+    })
+  })
 })
 app.listen(port)

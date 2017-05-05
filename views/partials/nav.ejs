@@ -1,0 +1,6 @@
+<% Object.keys(allClasses).forEach(function (id) { %>
+  <div class="<%= allClasses[id].classLink %>">
+    <p><a href="<%= allClasses[id].link %>">Choose your path!</a></p>
+    <h2><%= allClasses[id].title %></h2>
+    <p><img src="<%= allClasses[id].image %>" alt="<%= allClasses[id].image %>" class="heroImages"></p>
+<% }) %>

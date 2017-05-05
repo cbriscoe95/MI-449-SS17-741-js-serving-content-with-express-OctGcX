@@ -42,6 +42,29 @@ body,
   padding-bottom: 5px;
 }
 
+.sorcererNav,
+.rogueNav,
+.barbarianNav {
+  width: 300px;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 1px #888;
+  margin-right: 40px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding-bottom: 5px;
+  margin-left: 5%;
+  float: left;
+  text-align: center;
+}
+
+.rogueNav {
+  margin-left: 15%;
+}
+
+.sorcererNav {
+  margin-left: 15%;
+}
+
 .navbar {
   list-style-type: none;
   background-color: #a9a9a9;

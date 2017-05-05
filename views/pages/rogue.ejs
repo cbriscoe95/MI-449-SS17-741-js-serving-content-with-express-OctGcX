@@ -6,19 +6,6 @@
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
   </head>
   <body>
-    <nav>
-      <% include ../partials/header %>
-    </nav>
-    <% Object.keys(items).forEach(function (id) { %>
-      <div class="<%= items[id].title %>">
-        <p><%= items[id].template %></p>
-        <h2><%= items[id].title %></h2>
-        <p><img src="<%= items[id].image %>" alt="<%= items[id].image %>" class="heroImages"></p>
-        <p><a href="<%= items[id].link %>">Choose your path!</a></p>
-        <p><%= items[id].source %></p>
-        <p><%= items[id].archetype %></p>
-      </div>
-    <% }) %>
     <article class="rogue-guide">
       <header>
         <h2>So you want to play a rogue</h2>
@@ -43,5 +30,8 @@
         </ol>
       </section>
     </article>
+    <footer>
+      <% include ../partials/nav %>
+    </footer>
   </body>
 </html>
