@@ -14,6 +14,18 @@
         <h2>So you want to play a barbarian</h2>
       </header>
       <section>
+    <% Object.keys(items).forEach(function (id) { %>
+      <div class="<%= items[id].title %>">
+        <p><%= items[id].template %></p>
+        <h2><%= items[id].title %></h2>
+        <p><img src="<%= items[id].image %>" alt="<%= items[id].image %>" class="heroImages"></p>
+        <p><a href="<%= items[id].link %>">Choose your path!</a></p>
+        <p><%= items[id].source %></p>
+        <p><%= items[id].archetype %></p>
+      </div>
+    <% }) %>
+      </section>
+      <section>
         <h3>You should play a barbarian if:</h3>
         <ul>
           <li>You want to charge into the battle headfirst and crush some skulls in melee!</li>

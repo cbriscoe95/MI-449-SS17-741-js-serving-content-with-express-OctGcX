@@ -19,7 +19,7 @@ Object.keys(items).forEach(function (id) {
   var heroClass = items[id]
   app.get(heroClass.link, function (request, response) {
     response.render(heroClass.template, {
-      allClasses: items,
+      items: items,
       heroClass: heroClass
     })
   })
