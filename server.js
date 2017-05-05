@@ -5,7 +5,6 @@ var port = process.env.PORT || 8080
 app.use(express.static('public'))
 
 var items = {}
-var allClasses = {}
 function createItem (item) {
   var id = Object.keys(items).length
   item.createdAt = new Date()
@@ -16,26 +15,15 @@ app.get('/', function (request, response) {
     items: items
   })
 })
-// Object.keys(items).forEach(function (id) {
-//   var heroClass = items[id]
-//   app.get(heroClass.link, function (request, response) {
-//     response.render(heroClass.template, {
-//       allClasses: items,
-//       heroClass: heroClass
-//     })
-//     response.render(heroClass.template)
-//   })
-// })
 Object.keys(items).forEach(function (id) {
   var heroClass = items[id]
-  app.get(items.link, function(request, response) {
-    reponse.render(items.template, {
+  app.get(heroClass.link, function (request, response) {
+    response.render(heroClass.template, {
       allClasses: items,
       heroClass: heroClass
     })
   })
 })
-
 // app.get('/barbarian', function (request, response) {
 //   response.render('pages/barbarian')
 // })
